@@ -13,10 +13,15 @@ body {
   min-height: 100dvh;
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* Fundo centralizado vertical e horizontalmente */
   background: url("fundo.jpg") no-repeat center center fixed;
   background-size: cover;
+
   overflow-x: hidden;
+  transition: background-position 0.1s; /* suaviza o movimento do parallax */
 }
+
 
 .wrapper {
   display: grid;
