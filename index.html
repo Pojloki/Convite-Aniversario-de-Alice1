@@ -25,6 +25,12 @@
     </section>
   </main>
 </body>
-
+<script>
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+    document.body.style.backgroundPosition = `center calc(50% + ${scroll * 0.1}px)`;
+  });
+</script>
 
 </html>
+
