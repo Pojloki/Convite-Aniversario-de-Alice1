@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Confirmação de Presença – Aniversário</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
+  
 <body>
+  <div class="background"></div>
+
   <main class="wrapper" aria-labelledby="titulo">
     <section class="card" role="region" aria-label="Confirmação de presença">
       <header class="header">
@@ -25,12 +26,16 @@
     </section>
   </main>
 </body>
+
 <script>
+  const background = document.querySelector('.background');
+
   window.addEventListener('scroll', () => {
     const scroll = window.scrollY;
-    document.body.style.backgroundPosition = `center calc(50% + ${scroll * 0.1}px)`;
+    background.style.transform = `translateY(${scroll * 0.2}px)`; // efeito leve
   });
 </script>
 
 </html>
+
 
