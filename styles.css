@@ -1,0 +1,77 @@
+:root {
+  --card: rgba(26, 18, 51, 0.95);
+  --card-2: rgba(34, 26, 64, 0.95);
+  --muted: #c6bff0;
+  --shadow: rgba(0, 0, 0, .35);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: system-ui, Arial, sans-serif;
+  color: white;
+  background-color: #000;
+  /* fundo base = preto (ou próximo ao fundo da sua imagem) */
+}
+
+body {
+  background: url("Fundo.jpg") center center / cover no-repeat;
+  /* Remove 'fixed' to improve mobile compatibility */
+  will-change: background-position;
+}
+
+.page {
+  min-height: 200vh;
+  /* força scroll pra ver o efeito */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: min(720px, 95%);
+  background: linear-gradient(180deg, var(--card), var(--card-2));
+  border-radius: 20px;
+  box-shadow: 0 20px 50px var(--shadow);
+  overflow: hidden;
+}
+
+.header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.subtitle {
+  margin: .5rem 0 0;
+  color: var(--muted);
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+iframe {
+  width: 100%;
+  min-height: 750px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
