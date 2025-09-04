@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Confirmação de Presença – Aniversário</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-  
-<body>
-  <div class="background"></div>
 
-  <main class="wrapper" aria-labelledby="titulo">
-    <section class="card" role="region" aria-label="Confirmação de presença">
+<body>
+  <main class="page" aria-labelledby="titulo">
+    <section class="card">
       <header class="header">
         <h1 id="titulo" class="title">Confirmação de Presença</h1>
         <p class="subtitle">Por favor, responda ao formulário abaixo.</p>
       </header>
-
-      <div style="padding: 1.5rem 2rem 2rem;">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyr84K7U5uLEGQY5OncXNK3zGYmR_Un-mBQ3NBQUXKmRPVuQ/viewform?embedded=true"
-          width="640" height="621" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+      <div class="content">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfpLF4TF9OjJUmkhqVf4TmYd3_o_Wi2J8OIOwlXMDi5VJfZaw/viewform?embedded=true"
+          width="640" height="789" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
       </div>
-
       <div class="footer">Com carinho, esperamos você! ✨</div>
     </section>
   </main>
+
+  <script>
+    let current = 0, target = 0;
+    const ease = 0.06;
+
+    window.addEventListener("scroll", () => {
+      target = window.scrollY;
+    }, { passive: true });
+
+    function loop() {
+      current += (target - current) * ease;
+
+      // deslocamento controlado (máx. ±150px)
+      let offset = Math.max(-150, Math.min(150, current * 0.3));
+
+      // Use px for vertical offset, works on mobile too
+      document.body.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+
+      requestAnimationFrame(loop);
+    }
+    loop();
+  </script>
 </body>
 
-<script>
-  const background = document.querySelector('.background');
-
-  window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-    background.style.transform = `translateY(${scroll * 0.2}px)`; // efeito leve
-  });
-</script>
-
 </html>
-
-
