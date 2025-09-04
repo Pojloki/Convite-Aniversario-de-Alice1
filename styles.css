@@ -6,7 +6,7 @@
   --card: rgba(26, 18, 51, 0.9);
   --card-2: rgba(34, 26, 64, 0.9);
   --shadow: rgba(0,0,0,.35);
-}
+} 
 
 body {
   margin: 0;
@@ -68,4 +68,5 @@ iframe {
   color: var(--muted);
   font-size: .9rem;
 }
+
 
