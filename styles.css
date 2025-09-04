@@ -42,7 +42,7 @@ body {
 
 .title {
   margin: 0 0 .25rem;
-  color: var(--muted);
+  color: rgb(255,255,255);
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 800;
   letter-spacing: .3px;
@@ -68,5 +68,6 @@ iframe {
   color: var(--muted);
   font-size: .9rem;
 }
+
 
 
