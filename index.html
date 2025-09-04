@@ -5,46 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Confirmação de Presença – Aniversário</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <main class="page" aria-labelledby="titulo">
-    <section class="card">
+  <main class="wrapper" aria-labelledby="titulo">
+    <section class="card" role="region" aria-label="Confirmação de presença">
       <header class="header">
         <h1 id="titulo" class="title">Confirmação de Presença</h1>
         <p class="subtitle">Por favor, responda ao formulário abaixo.</p>
       </header>
-      <div class="content">
+
+      <div style="padding: 1.5rem 2rem 2rem;">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfpLF4TF9OjJUmkhqVf4TmYd3_o_Wi2J8OIOwlXMDi5VJfZaw/viewform?embedded=true"
-          width="640" height="789" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+          width="640" height="791" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
       </div>
+
       <div class="footer">Com carinho, esperamos você! ✨</div>
     </section>
   </main>
-
-  <script>
-    let current = 0, target = 0;
-    const ease = 0.06;
-
-    window.addEventListener("scroll", () => {
-      target = window.scrollY;
-    }, { passive: true });
-
-    function loop() {
-      current += (target - current) * ease;
-
-      // deslocamento controlado (máx. ±150px)
-      let offset = Math.max(-150, Math.min(150, current * 0.3));
-
-      // Use px for vertical offset, works on mobile too
-      document.body.style.backgroundPosition = `center calc(50% + ${offset}px)`;
-
-      requestAnimationFrame(loop);
-    }
-    loop();
-  </script>
 </body>
+
 
 </html>
